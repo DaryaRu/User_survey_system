@@ -1,13 +1,11 @@
 from django.db import models
-from django.contrib.auth import get_user_model
+from .anonymous_user import AnonymousUser
 from django.db.models.deletion import CASCADE
 from .survey import Survey
 
-User = get_user_model()
-
 class UserSurvey(models.Model):
-    user = models.ForeignKey(User, related_name='user_surveys', on_delete=CASCADE)
-    question = models.ForeignKey(Survey, related_name='user_surveys', on_delete=CASCADE) 
+    user = models.ForeignKey(AnonymousUser, related_name='user_surveys', on_delete=CASCADE)
+    survey = models.ForeignKey(Survey, related_name='user_surveys', on_delete=CASCADE) 
         
         
     class Meta:
