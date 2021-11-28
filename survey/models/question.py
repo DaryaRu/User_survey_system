@@ -14,4 +14,7 @@ class Question(models.Model):
     
     
     class Meta:
-        db_table = 'questions'              
+        db_table = 'questions'
+
+    def __str__(self):
+        return self.text                  
