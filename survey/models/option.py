@@ -10,3 +10,6 @@ class Option(models.Model):
         
     class Meta:
         db_table = 'options'
+
+    def __str__(self):
+        return self.text    
