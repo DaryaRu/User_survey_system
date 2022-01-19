@@ -11,6 +11,7 @@ get the list of answers with details on questions and surveys
 
 * [Django](https://djangodoc.ru/3.2/)
 * [DRF](https://www.django-rest-framework.org/)
+* [Docker](https://docs.docker.com/)
 
 
 ## Quick start
